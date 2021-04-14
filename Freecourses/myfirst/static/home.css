@@ -1,0 +1,68 @@
+<style>
+ .active
+ {
+	background-color:blue;
+ }
+#id
+{
+	margin-top:-330px;
+	opacity:0.4;
+} 
+ h6
+ {
+	border:line;
+ }
+ .containsmall
+ {
+	border:box;
+ }
+ #contain1
+  {
+	background-color: #ffffff;
+	margin-top:200px;
+	margin-right:100px;
+	margin-left: 100px;
+	box-shadow:0 5px 15px;
+  } 
+ .para
+  {
+	color: black;
+	text-align:center;
+	margin-top:-330px;
+	margin-bottom:20px;
+	padding-bottom:100px;
+	font-size:60px;
+	opacity: 0.4;
+  }
+  #para2
+  {
+	color:white;
+	text-align:left
+	margin:400px;
+  }
+  a{
+	margin-right:10px;
+	font-size:auto;
+  }
+  .nav-link.hover{
+  color:pink;
+  }
+  
+  .card-horizontal{
+   display:flex;
+  flex: 1 1 auto;
+  }
+ 
+ #contain2
+ {
+	background-color:#ffffff;
+	display:flex;
+	justify-content: space-between;
+	padding:20px;
+ }
+ .responsive {
+  width: 100%;
+  max-width:1350px;
+  height:500px;
+}
+</style>

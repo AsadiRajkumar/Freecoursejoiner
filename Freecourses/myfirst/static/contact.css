@@ -1,0 +1,41 @@
+
+	.para
+	{
+	color: black;
+	text-align:center;
+	margin-top:-330px;
+	margin-bottom:40px;
+	padding-bottom:180px;
+	font-size:60px;
+	opacity: 0.4;
+	}
+	form{
+	justify-content:center;
+	display:flex;
+	flex-direction:vertical;
+	}
+	#tb{
+		border:20px;
+	}
+	#but{
+	color:blue;
+	}
+	
+	.responsive {
+	width: 100%;
+	max-width:1350px;
+	height:500px;
+	}
+	
+	.box input[type= "text"], .box input[type= "email"],.box textarea{
+	border-radius:16px;
+	}
+	
+	a{
+	margin-right:10px;
+	font-size:auto;
+	}
+	
+	.navbar{
+	display:flex;
+	}
