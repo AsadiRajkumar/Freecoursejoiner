@@ -1,0 +1,71 @@
+ {% extends 'base.html' %}
+ {% load static%}
+ {%block content%}
+  <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+	
+<p class="para"><b><Strong>Welcome To<br>Free Courses</Strong></b></p>
+<div class="container-fluid-sm pt-1">
+
+	<div class="container-fluid-sm bg-dark">
+		<div class="container-sm p-5 mt-4 mb-4">
+			<div class="row">
+				<div class="col-md-5">
+					<h2 class="text-light">O U R <br>M I S S I O N</h2>
+					<br>
+					<h2 class="text-danger">________</h2>
+					<br>
+					<p align="left" class="text-light float-left">
+					Our mission is to provide free courses, books for the students in need.</p>
+				</div>
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-4">
+					<div class="card m-4">
+						<img src="{% static 'images/mission.webp' %}" height="200px">
+						<div class="card-body">
+						<div class="title mt-1 text-center"><Strong>Knowledge is our Strength</Strong></div>
+						<div class="card-body text-center">we all together, forever and ever</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="card mb-4" id="contain1">
+	<div class="card-header text-center text-dark"><h3></i><strong>RECENT POSTS</strong></h3>
+	</div>
+		<div class="text-center text-info"><h4><strong>Udemy courses</strong></h4></div>
+			<div class="row text-center">
+				{% for i in udemy %}
+				<div class="col-md-3">
+					<div class="card m-4">
+						<img src="{{i.pic.url}}">
+						<div class="card-body">
+							<div class="card-title" style="font-size:10px"><strong>{{i.coursetitle}}</strong></div>
+							<div class="card-text"><a href="{{i.link}}">Enroll Now</a></div>
+							<div>{{i.Date}}</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		<div class="text-center text-info"><h4><strong>JOBS</strong></h4></div>
+			<div class="row text-center">
+				{% for i in jobs %}
+				<div class="col-md-6">
+					<div class="card m-4 text-center p-5">
+								<h2 class="text-success" style="border-bottom:solid black">{{i.title}}</h2></t><h6>{{i.Date}}</h6>
+								<p><i>{{i.titledescription}}</i></p>
+								<a href='/Jobs'>more details</a>
+								<h2>Application link</h2>
+								<a href="{{i.applylink}}"> Apply now </a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+</div>
+
+	{%endblock content%}

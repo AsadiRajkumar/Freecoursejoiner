@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+ {% load static %}
+  {%if title%}
+	<title>Freecourse-{{title}}</title>
+ {%else%}
+	<title>Freecourses</title>
+ {%endif%}
+
+ {%block content%}
+ <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+
+ <title>Categories/Udemy</title>
+ 
+ <p class="para"><b><Strong>Udemy Free Courses</Strong></b></p>
+			<div class="container-fluid">
+			<div class="card" id="contain1">
+			<div class="row">
+							{% for i in udemy %}
+							<div class="col-md-3">
+								<div class="card m-4">
+									<img src="{{i.pic.url}}">
+									<div class="card-body">
+										<div class="card-title" style="font-size:10px"><strong>{{i.coursetitle}}</strong></div>
+										<div class="card-text"><a href="{{i.link}}">Enroll Now</a></div>
+										<div>{{i.Date}}</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+			</div>
+			</div>
+			</div>
+<div class="container-sm text-center">
+	<div class="row">
+	  <div class = "col-md-12">
+		<div class="pager">
+		  <span class="step-links">
+			{% if jobs.has_previous %}
+				<a  class="btn btn-outline-info "href="?page={{ jobs.previous_page_number }}">Previous</a>
+			{% else %}
+				<a class="btn" title = "No Posts available">Previous</a>
+			{% endif %}
+			{% if jobs.has_next %}
+				<a class="btn btn-outline-info" href="?page={{ jobs.next_page_number }}">Next</a>
+			{% else %}
+				<a class="btn" title = "No Posts available">Next</a>
+			{% endif %}
+			</span>
+		 </div>
+	  </div>
+	</div>
+</div>
+
+ {%endblock content%}

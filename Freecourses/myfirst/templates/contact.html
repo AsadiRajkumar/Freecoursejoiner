@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+<link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}">
+<p class="para"><b><Strong>Contact Info</Strong></b></p>
+	<div class="container-sm text-center mb-4 mt-5 pt-5">
+	<h4 style="margin-top:60px"><b>If you have any query regarding Site, Advertisement, and any other issue, please feel free to contact at freecourses@gmail.com</b></h4>
+	</div>
+	<div class="container-fluid-sm">
+	<form method="POST" class="container-sm" id="tb">
+		{% csrf_token %}
+		<table align="center">
+			<tr>
+				<td><strong>Name</strong></td>
+				<td class="box"><input type="text" name="name" placeholder="Name" required></input></td>
+			</tr>
+			<tr>
+				<td><strong>E-mail </strong></td>
+				<td class="box"><input type="email" name="Email" placeholder="Email" required></input></td>
+			</tr>
+			<tr>
+				<td> <strong> Subject </strong></td>
+				<td class="box"><input type="text" name="Subject" placeholder="Subject" required></input></td>
+			</tr>
+			<tr>
+				<td> <strong>Description </strong></td>
+				<td class="box"><textarea rows="4" cols="22" placeholder="Description" name="description" required></textarea></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="submit" class="btn btn-primary"></button></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+	
+	<div class="container-fluid-sm para2">
+	
+	</div>
+{%endblock content%}

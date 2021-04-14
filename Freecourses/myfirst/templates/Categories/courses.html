@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+ {% load static%}
+  {%if title%}
+	<title>Freecourse-{{title}}</title>
+ {%else%}
+	<title>Freecourses</title>
+ {%endif%}
+
+ {%block content%}
+ <style>
+	.para
+	   {
+	   color: black;
+	   text-align:center;
+	   margin-top:-330px;
+	   margin-bottom:40px;
+	   padding-bottom:180px;
+	   font-size:60px;
+	   opacity: 0.4;
+	   }
+
+</style>
+ <title>Categories/Free courses</title>
+ <p class="para"><b><Strong>Free Online Courses</Strong></b></p>
+ <div class="container-sm">
+			<div class="row">
+				{% for i in freecourses%}
+				<div class="col-md-12">
+					<div class="card m-4 text-center" style="border:solid black">
+						<STRONG>{{i.Date}}</STRONG>
+						<div class="card-body">
+							<div class="card-header" style="font-size:25px"><strong><b>{{i.title}}</strong></div>
+							<br>
+							<div class="card-text">
+								<p>{{i.coursename}}</p></b>
+								<h6>Link:- &nbsp <a class="text-danger" href="{{ i.link }}" name="Enroll now">{{i.link}}</a></h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+</div>
+ {%endblock content%}
